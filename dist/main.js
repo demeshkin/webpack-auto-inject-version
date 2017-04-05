@@ -42,12 +42,12 @@ var WebpackAutoInject = (function () {
             _this.executeComponents(components, done);
         }, function (err) { _this.executeComponents(components, done); });
     };
-    WebpackAutoInject.options = {
-        autoIncrease: true,
-        injectAsComment: true,
-        injectByTag: true,
-        injectByTagFileRegex: /^index\.html$/
-    };
     return WebpackAutoInject;
 }());
+WebpackAutoInject.options = {
+    autoIncrease: true,
+    injectAsComment: true,
+    injectByTag: true,
+    injectByTagFileRegex: /^index\.html$/
+};
 module.exports = WebpackAutoInject;
