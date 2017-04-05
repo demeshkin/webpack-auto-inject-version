@@ -20,7 +20,7 @@ class InjectByTag{
                 if(this.context.options.injectByTagFileRegex.test(basename)) {
                     let replaced = 0;
                     let asset = compilation.assets[basename];
-                    let modFile = asset.source().replace(/(\<\{version\}\>)/g, () => {
+                    let modFile = asset.source().toString().replace(/(\<\{version\}\>)/g, () => {
                         replaced++;
                         return this.context.version;
                     });
